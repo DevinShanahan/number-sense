@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SenseN</title>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <script type='text/javascript' src = script.js></script>
+</head>
+<body>
+  <!--navbar-->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Sense<span>N</span></a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="#">How to Play <span class="sr-only">(current)</span></a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Difficulty <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="easy.html">Easy</a></li>
+              <li><a href="medium.html">Medium</a></li>
+              <li><a href="hard.html">Hard</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Locked: Hardest</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="nav navbar-right">
+          <button type="button" class="btn btn-default navbar-btn">Sign in</button>
+        </div>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <!--head-->
+  <div class="container text-center">
+    <h2 id = 'title'>Round 1: <span>Addition</span></h2>
+    <div class="container text-center">
+      <h3 class = "hiding" id = "goal">Starting Number: <span id = "startNumber"></span>      Goal Number: <span id = "goalNumber"></span></h3></br>
+      <h3 class = "hiding" id = "calc">Expression: <span id = "calcNumber"></span></h3>
+    </div>
+      <a class="btn btn-default hiding active" href="#" role="button" id = "round1-easy">Start</a>
+    <div class="progress">
+      <div class="progress-bar progress-bar-danger progress-bar-striped hiding" id = "progbar" \
+        role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+      </div>
+    </div>
+  </div>
+  <!--gameboard columns-->
+  <div class="container text-center" id = "gameBoard">
+    <div class="container">
+      <div class ="col-md-4"></div>
+      <div class="col-md-1"></div>
+      <div class="col-md-1"></div>
+      <div class="col-md-1"></div>
+      <div class="col-md-1"></div>
+      <div class ="col-md-4"></div>
+    </div>
+    <div class="container">
+      <div class ="col-md-4"></div>
+      <div class="col-md-1"></div>
+      <div class="col-md-1"></div>
+      <div class="col-md-1"></div>
+      <div class="col-md-1"></div>
+      <div class ="col-md-4"></div>
+    </div>
+    <div class="container">
+      <div class ="col-md-4"></div>
+      <div class="col-md-1"></div>
+      <div class="col-md-1"></div>
+      <div class="col-md-1"></div>
+      <div class="col-md-1"></div>
+      <div class ="col-md-4"></div>
+    </div>
+    <div class="container">
+      <div class ="col-md-4"></div>
+      <div class="col-md-1"></div>
+      <div class="col-md-1"></div>
+      <div class="col-md-1"></div>
+      <div class="col-md-1"></div>
+      <div class ="col-md-4"></div>
+    </div>
+  </div>
+  <div class="container text-center">
+    <h3 class = "hiding" id = "pointCalc">Points: <span id = "points">0</span></h3></br>
+  </div>
+  <div class = "container text-center hiding end">
+    <h1 class ="hiding endGame">Time's Up!</h1></br>
+    <h2 class="hiding endGame">Total Score: <span id = "points-end">0</span> points</h2></br>
+    <h2 class="hiding endGame round2-easy">Next Round:</br>Subtraction</h2></br>
+    <h2 class="hiding endGame round3-easy">Next Round:</br>Addition and Subtraction</h2></br>
+    <a class="btn btn-default hiding endGame round2-easy" href="#" role="button">Continue</a>
+    <a class="btn btn-default hiding endGame round3-easy" href="#" role="button">Continue</a>
+  </div>
+</body>
+</html>
